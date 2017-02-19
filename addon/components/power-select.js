@@ -252,9 +252,7 @@ export default Component.extend({
 
     select(selected /* , e */) {
       let publicAPI = this.get('publicAPI');
-      if (!isEqual(publicAPI.selected, selected)) {
-        this.get('onchange')(selected, publicAPI);
-      }
+      this.get('onchange')(selected, publicAPI);
     },
 
     search(term) {
